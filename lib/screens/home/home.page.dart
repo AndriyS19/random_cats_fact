@@ -1,8 +1,5 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:random_cat_facts/main.dart';
 import 'package:random_cat_facts/screens/home/home_cubit.dart';
 import 'package:soft_edge_blur/soft_edge_blur.dart';
 
@@ -123,6 +120,7 @@ class HomeView extends StatelessWidget {
                                 ),
                                 const SizedBox(height: 16),
                                 Expanded(
+                                  // flex: 3,
                                   child: Container(
                                     width: double.infinity,
                                     padding: const EdgeInsets.all(16),
@@ -134,16 +132,22 @@ class HomeView extends StatelessWidget {
                                   ),
                                 ),
                                 if (state is HomeLoaded)
-                                  Image.network(
-                                    state.imageUrl,
-                                    fit: BoxFit.cover,
-                                    loadingBuilder: (context, child, loadingProgress) {
-                                      if (loadingProgress == null) return child;
-                                      return Container(color: Colors.grey[200]);
-                                    },
-                                    errorBuilder: (context, error, stackTrace) {
-                                      return Container(color: Colors.grey[200]);
-                                    },
+                                  Flexible(
+                                    flex: 2, 
+                                    // image displaying
+                                    child: Center(
+                                      child: Image.network(
+                                        state.imageUrl,
+                                        fit: BoxFit.contain,
+                                        loadingBuilder: (context, child, loadingProgress) {
+                                          if (loadingProgress == null) return child;
+                                          return Container(color: Colors.grey[200]);
+                                        },
+                                        errorBuilder: (context, error, stackTrace) {
+                                          return Container(color: Colors.grey[200]);
+                                        },
+                                      ),
+                                    ),
                                   ),
                                 const SizedBox(height: 20),
                                 SizedBox(
