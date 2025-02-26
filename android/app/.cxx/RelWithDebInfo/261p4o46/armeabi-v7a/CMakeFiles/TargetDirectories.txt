@@ -1,0 +1,2 @@
+/Users/andriishybunko/Development/testProjects/random_cats_fact/android/app/.cxx/RelWithDebInfo/261p4o46/armeabi-v7a/CMakeFiles/edit_cache.dir
+/Users/andriishybunko/Development/testProjects/random_cats_fact/android/app/.cxx/RelWithDebInfo/261p4o46/armeabi-v7a/CMakeFiles/rebuild_cache.dir

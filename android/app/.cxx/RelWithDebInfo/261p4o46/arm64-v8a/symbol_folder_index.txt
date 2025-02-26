@@ -1,0 +1,1 @@
+/Users/andriishybunko/Development/testProjects/random_cats_fact/build/app/intermediates/cxx/RelWithDebInfo/261p4o46/obj/arm64-v8a

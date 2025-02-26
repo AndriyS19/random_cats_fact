@@ -1,0 +1,2 @@
+/Users/andriishybunko/Development/testProjects/random_cats_fact/android/app/.cxx/Debug/1oo6e828/x86_64/CMakeFiles/edit_cache.dir
+/Users/andriishybunko/Development/testProjects/random_cats_fact/android/app/.cxx/Debug/1oo6e828/x86_64/CMakeFiles/rebuild_cache.dir
