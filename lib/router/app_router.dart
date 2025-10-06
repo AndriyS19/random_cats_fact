@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:random_cat_facts/nav_bar/nav_bar.dart';
-import 'package:random_cat_facts/screens/history/history_page.dart';
-import 'package:random_cat_facts/screens/home/home.page.dart';
+import 'package:random_cat_facts/screens/favorite/favorite_page.dart';
+import 'package:random_cat_facts/screens/home/home_page.dart';
 import 'package:random_cat_facts/screens/settings/settings_page.dart';
 
 final GlobalKey<NavigatorState> _rootNavigatorKey = GlobalKey<NavigatorState>();
@@ -22,7 +22,7 @@ final goRouter = GoRouter(
           path: '/history',
           pageBuilder: (context, state) => NoTransitionPage(
             key: state.pageKey,
-            child: const HistoryPage(),
+            child: const FavoriteFactsPage(),
           ),
         ),
         GoRoute(
