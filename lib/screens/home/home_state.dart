@@ -4,28 +4,31 @@ abstract class HomeState extends Equatable {
   const HomeState();
 
   @override
-  List<Object> get props => [DateTime.now().toIso8601String()];
+  List<Object?> get props => [];
 }
-
-class HomeLoading extends HomeState {}
 
 class HomeInitial extends HomeState {}
 
-class HomeLoaded extends HomeState {
-  final String fact;
-  final String imageUrl;
+class HomeLoading extends HomeState {}
 
-  const HomeLoaded({required this.fact, required this.imageUrl});
+class HomeLoaded extends HomeState {
+  final CatApiResponse catData;
+
+  const HomeLoaded({required this.catData});
 
   @override
-  List<Object> get props => [fact, imageUrl];
+  List<Object?> get props => [catData.fact, catData.imageUrl];
 }
 
 class HomeError extends HomeState {
-  final String error;
+  final String message;
 
-  const HomeError(this.error);
+  const HomeError(this.message);
 
   @override
-  List<Object> get props => [error];
+  List<Object?> get props => [message];
 }
+
+class FactAlreadySaved extends HomeState {}
+
+class FactSaved extends HomeState {}
